@@ -1,7 +1,16 @@
 import { ArrowRight, CheckCircle, Code, Sparkles } from "lucide-react";
 import portraitImage from "@assets/Formal Portrait in Navy Suit.png";
+import TypewriterEffect from "./TypewriterEffect";
 
 export default function HeroSection() {
+  const roles = [
+    "Software Developer",
+    "AI Agent Developer", 
+    "Web Developer",
+    "Full-Stack Engineer",
+    "API Integration Expert"
+  ];
+
   return (
     <section id="home" className="pt-16 min-h-screen flex items-center relative overflow-hidden">
       {/* Floating Elements */}
@@ -19,8 +28,11 @@ export default function HeroSection() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
               David Kamau
             </h1>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-muted-foreground mb-8">
-              Software Developer & AI Agent Developer
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-muted-foreground mb-8 min-h-[1.2em]">
+              <TypewriterEffect 
+                words={roles}
+                className="text-github-blue"
+              />
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-lg">
               Passionate software developer specializing in web development, software engineering, and cutting-edge AI agent development. 
@@ -29,14 +41,14 @@ export default function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
                 href="#contact" 
-                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-github-blue hover:bg-blue-600 transition-all duration-300 glow-effect"
+                className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-github-blue hover:bg-blue-600 transition-all duration-300 glow-effect hover:scale-105"
               >
                 Get In Touch
                 <ArrowRight className="ml-2 -mr-1 w-4 h-4" />
               </a>
               <a 
                 href="#about" 
-                className="inline-flex items-center px-6 py-3 border border-github-blue text-base font-medium rounded-lg text-github-blue bg-card/50 hover:bg-muted backdrop-blur-sm transition-all duration-300"
+                className="inline-flex items-center px-6 py-3 border border-github-blue text-base font-medium rounded-lg text-github-blue bg-card/50 hover:bg-muted backdrop-blur-sm transition-all duration-300 hover:scale-105"
               >
                 <Sparkles className="mr-2 w-4 h-4" />
                 Learn More
