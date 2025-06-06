@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%; /* #FFFFFF */
+  --foreground: 210 11% 40%; /* #586069 */
+  --muted: 210 17% 96%; /* #F6F8FA */
+  --muted-foreground: 210 11% 44%; /* #586069 */
+  --popover: 0 0% 100%; /* #FFFFFF */
+  --popover-foreground: 210 11% 15%; /* #24292E */
+  --card: 0 0% 100%; /* #FFFFFF */
+  --card-foreground: 210 11% 15%; /* #24292E */
+  --border: 210 17% 89%; /* #E1E4E8 */
+  --input: 210 17% 89%; /* #E1E4E8 */
+  --primary: 211 96% 42%; /* #0366D6 */
+  --primary-foreground: 0 0% 100%; /* #FFFFFF */
+  --secondary: 210 17% 96%; /* #F6F8FA */
+  --secondary-foreground: 210 11% 15%; /* #24292E */
+  --accent: 210 17% 96%; /* #F6F8FA */
+  --accent-foreground: 210 11% 15%; /* #24292E */
+  --destructive: 0 84% 60%; /* #D73A49 */
+  --destructive-foreground: 0 0% 98%; /* #FAFBFC */
+  --ring: 211 96% 42%; /* #0366D6 */
+  --radius: 0.5rem;
+  --github-blue: 211 96% 42%; /* #0366D6 */
+  --github-dark: 210 11% 15%; /* #24292E */
+  --github-green: 134 61% 41%; /* #28A745 */
+  --github-text: 210 11% 40%; /* #586069 */
+  --github-light: 210 17% 96%; /* #F6F8FA */
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 211 96% 42%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .skill-card {
+    transition: all 0.3s ease;
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .bg-github-blue {
+    background-color: hsl(var(--github-blue));
+  }
+  
+  .bg-github-dark {
+    background-color: hsl(var(--github-dark));
+  }
+  
+  .bg-github-green {
+    background-color: hsl(var(--github-green));
+  }
+  
+  .bg-github-light {
+    background-color: hsl(var(--github-light));
+  }
+  
+  .text-github-blue {
+    color: hsl(var(--github-blue));
+  }
+  
+  .text-github-dark {
+    color: hsl(var(--github-dark));
+  }
+  
+  .text-github-green {
+    color: hsl(var(--github-green));
+  }
+  
+  .text-github-text {
+    color: hsl(var(--github-text));
+  }
+  
+  .border-github-blue {
+    border-color: hsl(var(--github-blue));
+  }
+  
+  .hover\:bg-github-light:hover {
+    background-color: hsl(var(--github-light));
+  }
+  
+  .hover\:text-github-blue:hover {
+    color: hsl(var(--github-blue));
+  }
+}
