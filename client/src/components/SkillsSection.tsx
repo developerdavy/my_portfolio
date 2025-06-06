@@ -1,6 +1,8 @@
 import { Users, Award, Settings, MessageCircle, Layout, Bot, Zap, Database } from "lucide-react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function SkillsSection() {
+  const { t } = useLanguage();
   const programmingLanguages = [
     {
       name: "JavaScript",
@@ -69,26 +71,26 @@ export default function SkillsSection() {
 
   const professionalSkills = [
     {
-      name: "Team Work",
-      description: "Collaborative development and cross-functional coordination",
+      name: t('skills.teamwork'),
+      description: t('skills.teamwork.desc'),
       icon: Users,
       color: "bg-github-green"
     },
     {
-      name: "Leadership Skills",
-      description: "Project management and technical team guidance",
+      name: t('skills.leadership'),
+      description: t('skills.leadership.desc'),
       icon: Award,
       color: "bg-github-blue"
     },
     {
-      name: "Problem Solving",
-      description: "Analytical thinking and innovative solution development",
+      name: t('skills.problem'),
+      description: t('skills.problem.desc'),
       icon: Settings,
       color: "bg-yellow-500"
     },
     {
-      name: "Communication",
-      description: "Clear technical documentation and stakeholder engagement",
+      name: t('skills.communication'),
+      description: t('skills.communication.desc'),
       icon: MessageCircle,
       color: "bg-purple-600"
     }
@@ -104,10 +106,10 @@ export default function SkillsSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 flex items-center justify-center">
             <Zap className="w-8 h-8 mr-3 text-github-blue" />
-            Skills & Expertise
+            {t('skills.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive overview of my technical competencies and professional skills
+            {t('skills.subtitle')}
           </p>
         </div>
 
@@ -115,12 +117,12 @@ export default function SkillsSection() {
         <div className="mb-16">
           <h3 className="text-2xl font-semibold text-foreground mb-8 text-center flex items-center justify-center">
             <Database className="w-6 h-6 mr-3 text-accent" />
-            Technical Skills
+            {t('skills.technical')}
           </h3>
           
           {/* Programming Languages */}
           <div className="mb-12">
-            <h4 className="text-lg font-medium text-foreground mb-6">Programming Languages</h4>
+            <h4 className="text-lg font-medium text-foreground mb-6">{t('skills.languages')}</h4>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {programmingLanguages.map((language, index) => (
                 <div key={index} className="skill-card bg-card/80 backdrop-blur-sm rounded-xl p-6 text-center border border-border glow-effect">
@@ -136,7 +138,7 @@ export default function SkillsSection() {
 
           {/* Frameworks & Technologies */}
           <div className="mb-12">
-            <h4 className="text-lg font-medium text-foreground mb-6">Frameworks & Technologies</h4>
+            <h4 className="text-lg font-medium text-foreground mb-6">{t('skills.frameworks')}</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {frameworks.map((framework, index) => (
                 <div key={index} className="skill-card bg-card/80 backdrop-blur-sm rounded-xl p-6 border border-border">
@@ -161,7 +163,7 @@ export default function SkillsSection() {
 
           {/* Specializations */}
           <div>
-            <h4 className="text-lg font-medium text-foreground mb-6">Specializations</h4>
+            <h4 className="text-lg font-medium text-foreground mb-6">{t('skills.specializations')}</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {specializations.map((specialization, index) => (
                 <div key={index} className="skill-card bg-card/80 backdrop-blur-sm rounded-xl p-6 border border-border">
@@ -184,7 +186,7 @@ export default function SkillsSection() {
         <div>
           <h3 className="text-2xl font-semibold text-foreground mb-8 text-center flex items-center justify-center">
             <Award className="w-6 h-6 mr-3 text-github-green" />
-            Professional Skills
+            {t('skills.professional')}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {professionalSkills.map((skill, index) => (

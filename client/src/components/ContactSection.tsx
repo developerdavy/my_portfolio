@@ -1,6 +1,9 @@
 import { Mail, Phone, MapPin, Clock, ArrowRight, MessageSquare, Send } from "lucide-react";
+import { useLanguage } from "../contexts/LanguageContext";
 
 export default function ContactSection() {
+  const { t } = useLanguage();
+  
   return (
     <section id="contact" className="py-20 bg-muted/30 backdrop-blur-sm relative overflow-hidden">
       {/* Background decorative elements */}
@@ -11,10 +14,10 @@ export default function ContactSection() {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 flex items-center justify-center">
             <MessageSquare className="w-8 h-8 mr-3 text-github-blue" />
-            Get In Touch
+            {t('contact.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Ready to collaborate on your next project? Let's build something amazing together.
+            {t('contact.subtitle')}
           </p>
         </div>
         
@@ -24,8 +27,8 @@ export default function ContactSection() {
             <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-github-blue to-blue-600 rounded-full flex items-center justify-center shadow-lg pulse-glow">
               <Mail className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-foreground mb-4">Email Me</h3>
-            <p className="text-muted-foreground mb-6">Drop me a line for project inquiries or collaboration opportunities</p>
+            <h3 className="text-xl font-semibold text-foreground mb-4">{t('contact.email.title')}</h3>
+            <p className="text-muted-foreground mb-6">{t('contact.email.desc')}</p>
             <a 
               href="mailto:kamaudavid1803@gmail.com" 
               className="inline-flex items-center text-github-blue hover:text-accent font-medium transition-all duration-300 hover:scale-105"
@@ -40,8 +43,8 @@ export default function ContactSection() {
             <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-github-green to-green-600 rounded-full flex items-center justify-center shadow-lg pulse-glow">
               <Phone className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-xl font-semibold text-foreground mb-4">Call Me</h3>
-            <p className="text-muted-foreground mb-6">Let's discuss your project requirements and technical needs</p>
+            <h3 className="text-xl font-semibold text-foreground mb-4">{t('contact.phone.title')}</h3>
+            <p className="text-muted-foreground mb-6">{t('contact.phone.desc')}</p>
             <a 
               href="tel:+254740133390" 
               className="inline-flex items-center text-github-blue hover:text-accent font-medium transition-all duration-300 hover:scale-105"
@@ -57,12 +60,12 @@ export default function ContactSection() {
           <div className="inline-flex items-center justify-center space-x-8 text-muted-foreground bg-card/50 backdrop-blur-sm rounded-lg px-6 py-4 border border-border">
             <div className="flex items-center">
               <MapPin className="w-5 h-5 mr-2 text-github-blue" />
-              <span>Kenya</span>
+              <span>{t('contact.location')}</span>
             </div>
             <div className="w-px h-6 bg-border"></div>
             <div className="flex items-center">
               <Clock className="w-5 h-5 mr-2 text-accent" />
-              <span>Available for remote work</span>
+              <span>{t('contact.availability')}</span>
             </div>
           </div>
         </div>

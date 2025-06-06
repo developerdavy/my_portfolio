@@ -18,22 +18,17 @@ export default function AboutSection() {
           <div className="skill-card">
             <h3 className="text-2xl font-semibold text-foreground mb-6 flex items-center">
               <Brain className="w-6 h-6 mr-3 text-github-blue" />
-              Professional Journey
+              {t('about.journey.title')}
             </h3>
             <div className="space-y-4 text-muted-foreground">
               <p className="leading-relaxed">
-                As a dedicated software developer with extensive experience in web development, software engineering, 
-                and AI agent development, I specialize in creating robust, scalable solutions that drive business growth 
-                and enhance user experiences.
+                {t('about.journey.p1')}
               </p>
               <p className="leading-relaxed">
-                My expertise spans across multiple programming languages including Python, JavaScript, PHP, and Java, 
-                with deep knowledge in frameworks like Laravel and Node.js. I excel in API development and integration, 
-                ensuring seamless connectivity between systems and services.
+                {t('about.journey.p2')}
               </p>
               <p className="leading-relaxed">
-                Currently focusing on cutting-edge AI agent development, I combine traditional software engineering 
-                principles with modern AI technologies to build intelligent systems that solve complex business challenges.
+                {t('about.journey.p3')}
               </p>
             </div>
           </div>
@@ -42,24 +37,24 @@ export default function AboutSection() {
             <div className="bg-card/70 backdrop-blur-sm rounded-xl p-6 skill-card border border-border">
               <h4 className="text-lg font-semibold text-foreground mb-4 flex items-center">
                 <Target className="w-5 h-5 mr-3 text-github-blue" />
-                Core Expertise
+                {t('about.expertise.title')}
               </h4>
               <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-github-green mr-3" />
-                  Full-Stack Web Development
+                  {t('about.expertise.fullstack')}
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-github-green mr-3" />
-                  AI Agent Development
+                  {t('about.expertise.ai')}
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-github-green mr-3" />
-                  API Development & Integration
+                  {t('about.expertise.api')}
                 </li>
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-github-green mr-3" />
-                  Mobile App Development
+                  {t('about.expertise.mobile')}
                 </li>
               </ul>
             </div>
@@ -67,24 +62,24 @@ export default function AboutSection() {
             <div className="bg-card/70 backdrop-blur-sm rounded-xl p-6 skill-card border border-border">
               <h4 className="text-lg font-semibold text-foreground mb-4 flex items-center">
                 <Rocket className="w-5 h-5 mr-3 text-accent" />
-                Professional Values
+                {t('about.values.title')}
               </h4>
               <div className="text-muted-foreground space-y-3">
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-github-blue rounded-full mr-3"></div>
-                  <span className="text-sm">Problem-solving focused approach</span>
+                  <span className="text-sm">{t('about.values.problem')}</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-github-green rounded-full mr-3"></div>
-                  <span className="text-sm">Collaborative team leadership</span>
+                  <span className="text-sm">{t('about.values.team')}</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
-                  <span className="text-sm">Innovation-driven mindset</span>
+                  <span className="text-sm">{t('about.values.innovation')}</span>
                 </div>
                 <div className="flex items-center">
                   <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
-                  <span className="text-sm">Continuous learning commitment</span>
+                  <span className="text-sm">{t('about.values.learning')}</span>
                 </div>
               </div>
             </div>
