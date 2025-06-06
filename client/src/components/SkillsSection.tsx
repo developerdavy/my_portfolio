@@ -1,29 +1,29 @@
-import { Users, Award, Settings, MessageCircle, Layout, Bot } from "lucide-react";
+import { Users, Award, Settings, MessageCircle, Layout, Bot, Zap, Database } from "lucide-react";
 
 export default function SkillsSection() {
   const programmingLanguages = [
     {
       name: "JavaScript",
       description: "ES6+, Modern JS",
-      color: "bg-yellow-500",
+      color: "bg-gradient-to-br from-yellow-400 to-yellow-600",
       initials: "JS"
     },
     {
       name: "Python",
       description: "Backend, AI/ML",
-      color: "bg-blue-600",
+      color: "bg-gradient-to-br from-blue-500 to-blue-700",
       initials: "PY"
     },
     {
       name: "PHP",
       description: "Server-side dev",
-      color: "bg-purple-600",
+      color: "bg-gradient-to-br from-purple-500 to-purple-700",
       initials: "PHP"
     },
     {
       name: "Java",
       description: "Enterprise, Android",
-      color: "bg-red-600",
+      color: "bg-gradient-to-br from-red-500 to-red-700",
       initials: "☕"
     }
   ];
@@ -32,21 +32,21 @@ export default function SkillsSection() {
     {
       name: "Laravel",
       description: "PHP framework for web artisans with elegant syntax",
-      color: "bg-red-500",
+      color: "bg-gradient-to-br from-red-400 to-red-600",
       initials: "L",
       tags: ["MVC", "Eloquent"]
     },
     {
       name: "Node.js",
       description: "JavaScript runtime for scalable network applications",
-      color: "bg-green-600",
+      color: "bg-gradient-to-br from-green-500 to-green-700",
       initials: "N",
       tags: ["Express", "REST"]
     },
     {
       name: "Android Dev",
       description: "Native Android application development",
-      color: "bg-green-500",
+      color: "bg-gradient-to-br from-green-400 to-green-600",
       initials: "🤖",
       tags: ["Kotlin", "Java"]
     }

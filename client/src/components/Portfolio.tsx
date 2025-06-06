@@ -87,7 +87,7 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white text-github-text">
+    <div className="min-h-screen bg-background text-foreground gradient-bg parallax-stars">
       <Navigation />
       <HeroSection />
       <AboutSection />

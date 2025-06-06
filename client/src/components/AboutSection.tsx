@@ -1,20 +1,23 @@
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Brain, Rocket, Target } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-muted/30 backdrop-blur-sm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-github-dark mb-4">About Me</h2>
-          <p className="text-lg text-github-text max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">About Me</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Building innovative solutions with modern technology stack and AI integration
           </p>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h3 className="text-2xl font-semibold text-github-dark mb-6">Professional Journey</h3>
-            <div className="space-y-4 text-github-text">
+          <div className="skill-card">
+            <h3 className="text-2xl font-semibold text-foreground mb-6 flex items-center">
+              <Brain className="w-6 h-6 mr-3 text-github-blue" />
+              Professional Journey
+            </h3>
+            <div className="space-y-4 text-muted-foreground">
               <p className="leading-relaxed">
                 As a dedicated software developer with extensive experience in web development, software engineering, 
                 and AI agent development, I specialize in creating robust, scalable solutions that drive business growth 
@@ -33,9 +36,12 @@ export default function AboutSection() {
           </div>
           
           <div className="space-y-6">
-            <div className="bg-github-light rounded-lg p-6">
-              <h4 className="text-lg font-semibold text-github-dark mb-4">Core Expertise</h4>
-              <ul className="space-y-2 text-github-text">
+            <div className="bg-card/70 backdrop-blur-sm rounded-xl p-6 skill-card border border-border">
+              <h4 className="text-lg font-semibold text-foreground mb-4 flex items-center">
+                <Target className="w-5 h-5 mr-3 text-github-blue" />
+                Core Expertise
+              </h4>
+              <ul className="space-y-3 text-muted-foreground">
                 <li className="flex items-center">
                   <CheckCircle className="w-4 h-4 text-github-green mr-3" />
                   Full-Stack Web Development
@@ -55,13 +61,28 @@ export default function AboutSection() {
               </ul>
             </div>
             
-            <div className="bg-github-light rounded-lg p-6">
-              <h4 className="text-lg font-semibold text-github-dark mb-4">Professional Values</h4>
-              <div className="text-github-text space-y-2">
-                <p className="text-sm">🎯 Problem-solving focused approach</p>
-                <p className="text-sm">🤝 Collaborative team leadership</p>
-                <p className="text-sm">💡 Innovation-driven mindset</p>
-                <p className="text-sm">📈 Continuous learning commitment</p>
+            <div className="bg-card/70 backdrop-blur-sm rounded-xl p-6 skill-card border border-border">
+              <h4 className="text-lg font-semibold text-foreground mb-4 flex items-center">
+                <Rocket className="w-5 h-5 mr-3 text-accent" />
+                Professional Values
+              </h4>
+              <div className="text-muted-foreground space-y-3">
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-github-blue rounded-full mr-3"></div>
+                  <span className="text-sm">Problem-solving focused approach</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-github-green rounded-full mr-3"></div>
+                  <span className="text-sm">Collaborative team leadership</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-accent rounded-full mr-3"></div>
+                  <span className="text-sm">Innovation-driven mindset</span>
+                </div>
+                <div className="flex items-center">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                  <span className="text-sm">Continuous learning commitment</span>
+                </div>
               </div>
             </div>
           </div>

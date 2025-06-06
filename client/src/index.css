@@ -3,31 +3,33 @@
 @tailwind utilities;
 
 :root {
-  --background: 0 0% 100%; /* #FFFFFF */
-  --foreground: 210 11% 40%; /* #586069 */
-  --muted: 210 17% 96%; /* #F6F8FA */
-  --muted-foreground: 210 11% 44%; /* #586069 */
-  --popover: 0 0% 100%; /* #FFFFFF */
-  --popover-foreground: 210 11% 15%; /* #24292E */
-  --card: 0 0% 100%; /* #FFFFFF */
-  --card-foreground: 210 11% 15%; /* #24292E */
-  --border: 210 17% 89%; /* #E1E4E8 */
-  --input: 210 17% 89%; /* #E1E4E8 */
-  --primary: 211 96% 42%; /* #0366D6 */
+  --background: 220 26% 14%; /* #1a2332 - Deep navy blue */
+  --foreground: 210 20% 85%; /* #d1d9e6 - Light blue-grey */
+  --muted: 220 26% 18%; /* #222b3d - Slightly lighter navy */
+  --muted-foreground: 210 15% 65%; /* #8a9bb0 - Medium blue-grey */
+  --popover: 220 26% 16%; /* #1e2631 - Dark navy */
+  --popover-foreground: 210 20% 90%; /* #e1e8f0 - Very light blue */
+  --card: 220 26% 16%; /* #1e2631 - Dark navy card */
+  --card-foreground: 210 20% 90%; /* #e1e8f0 - Light text on cards */
+  --border: 220 20% 25%; /* #364052 - Blue-grey border */
+  --input: 220 20% 25%; /* #364052 - Input background */
+  --primary: 211 100% 50%; /* #0080ff - Bright blue */
   --primary-foreground: 0 0% 100%; /* #FFFFFF */
-  --secondary: 210 17% 96%; /* #F6F8FA */
-  --secondary-foreground: 210 11% 15%; /* #24292E */
-  --accent: 210 17% 96%; /* #F6F8FA */
-  --accent-foreground: 210 11% 15%; /* #24292E */
+  --secondary: 220 26% 18%; /* #222b3d - Secondary navy */
+  --secondary-foreground: 210 20% 85%; /* #d1d9e6 - Light text */
+  --accent: 193 100% 50%; /* #00bfff - Cyan accent */
+  --accent-foreground: 220 26% 14%; /* #1a2332 - Dark text on accent */
   --destructive: 0 84% 60%; /* #D73A49 */
   --destructive-foreground: 0 0% 98%; /* #FAFBFC */
-  --ring: 211 96% 42%; /* #0366D6 */
-  --radius: 0.5rem;
-  --github-blue: 211 96% 42%; /* #0366D6 */
-  --github-dark: 210 11% 15%; /* #24292E */
+  --ring: 211 100% 50%; /* #0080ff - Focus ring */
+  --radius: 0.75rem;
+  --github-blue: 211 100% 50%; /* #0080ff - Bright blue */
+  --github-dark: 220 26% 14%; /* #1a2332 - Deep navy */
   --github-green: 134 61% 41%; /* #28A745 */
-  --github-text: 210 11% 40%; /* #586069 */
-  --github-light: 210 17% 96%; /* #F6F8FA */
+  --github-text: 210 20% 85%; /* #d1d9e6 - Light text */
+  --github-light: 220 26% 18%; /* #222b3d - Light navy sections */
+  --gradient-start: 220 30% 12%; /* #161e2b - Gradient start */
+  --gradient-end: 230 35% 20%; /* #1f2937 - Gradient end */
 }
 
 .dark {
@@ -71,10 +73,12 @@
 @layer components {
   .skill-card {
     transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
   }
   
   .skill-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 128, 255, 0.15);
   }
 
   .font-mono {
@@ -124,4 +128,63 @@
   .hover\:text-github-blue:hover {
     color: hsl(var(--github-blue));
   }
+
+  .gradient-bg {
+    background: linear-gradient(135deg, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
+  }
+
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .glow-effect {
+    box-shadow: 0 0 20px rgba(0, 128, 255, 0.3);
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  .slide-in-up {
+    animation: slideInUp 0.8s ease-out;
+  }
+
+  .parallax-stars {
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, #00bfff, transparent),
+      radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.1), transparent),
+      radial-gradient(1px 1px at 90px 40px, #0080ff, transparent),
+      radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.1), transparent),
+      radial-gradient(2px 2px at 160px 30px, #00bfff, transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: twinkle 20s linear infinite;
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse-glow {
+  from { box-shadow: 0 0 20px rgba(0, 128, 255, 0.3); }
+  to { box-shadow: 0 0 40px rgba(0, 128, 255, 0.6); }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes twinkle {
+  from { background-position: 0 0; }
+  to { background-position: -200px 0; }
 }
