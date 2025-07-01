@@ -8,14 +8,14 @@ export default function TestimonialsSection() {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "Grace Wanjiku",
       role: "Small Business Owner",
       quote: t("testimonial1"),
       project: "E-commerce Website",
       rating: 5
     },
     {
-      name: "Michael Chen",
+      name: "Samuel Kiprotich",
       role: "Startup Founder",
       quote: t("testimonial2"),
       project: "Business Portfolio",
