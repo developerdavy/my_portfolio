@@ -2,6 +2,10 @@ import Navigation from "./Navigation";
 import HeroSection from "./HeroSection";
 import AboutSection from "./AboutSection";
 import SkillsSection from "./SkillsSection";
+import TestimonialsSection from "./TestimonialsSection";
+import PricingSection from "./PricingSection";
+import CaseStudySection from "./CaseStudySection";
+import NewsletterSection from "./NewsletterSection";
 import ContactSection from "./ContactSection";
 import Footer from "./Footer";
 import { useEffect } from "react";
@@ -92,6 +96,10 @@ export default function Portfolio() {
       <HeroSection />
       <AboutSection />
       <SkillsSection />
+      <TestimonialsSection />
+      <PricingSection />
+      <CaseStudySection />
+      <NewsletterSection />
       <ContactSection />
       <Footer />
     </div>

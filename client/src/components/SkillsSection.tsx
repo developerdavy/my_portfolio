@@ -32,11 +32,11 @@ export default function SkillsSection() {
 
   const frameworks = [
     {
-      name: "Laravel",
-      description: "PHP framework for web artisans with elegant syntax",
-      color: "bg-gradient-to-br from-red-400 to-red-600",
-      initials: "L",
-      tags: ["MVC", "Eloquent"]
+      name: "React",
+      description: "Modern frontend library for building user interfaces",
+      color: "bg-gradient-to-br from-blue-400 to-blue-600",
+      initials: "⚛",
+      tags: ["JSX", "Hooks"]
     },
     {
       name: "Node.js",
@@ -44,6 +44,13 @@ export default function SkillsSection() {
       color: "bg-gradient-to-br from-green-500 to-green-700",
       initials: "N",
       tags: ["Express", "REST"]
+    },
+    {
+      name: "Laravel",
+      description: "PHP framework for web artisans with elegant syntax",
+      color: "bg-gradient-to-br from-red-400 to-red-600",
+      initials: "L",
+      tags: ["MVC", "Eloquent"]
     },
     {
       name: "Android Dev",
@@ -66,6 +73,33 @@ export default function SkillsSection() {
       description: "Intelligent automation, ML integration",
       icon: Bot,
       color: "bg-purple-600"
+    }
+  ];
+
+  const aiTools = [
+    {
+      name: "ChatGPT",
+      description: "AI-powered development and automation",
+      color: "bg-gradient-to-br from-green-400 to-green-600",
+      initials: "🤖"
+    },
+    {
+      name: "Bolt",
+      description: "AI development platform integration",
+      color: "bg-gradient-to-br from-purple-400 to-purple-600",
+      initials: "⚡"
+    },
+    {
+      name: "Figma",
+      description: "UI/UX design and prototyping",
+      color: "bg-gradient-to-br from-pink-400 to-pink-600",
+      initials: "🎨"
+    },
+    {
+      name: "HTML/CSS",
+      description: "Modern web styling and responsive design",
+      color: "bg-gradient-to-br from-orange-400 to-orange-600",
+      initials: "🌐"
     }
   ];
 
@@ -156,6 +190,22 @@ export default function SkillsSection() {
                       </span>
                     ))}
                   </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* AI Tools & Design Platforms */}
+          <div className="mb-12">
+            <h4 className="text-lg font-medium text-foreground mb-6">AI Tools & Design Platforms</h4>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {aiTools.map((tool, index) => (
+                <div key={index} className="skill-card bg-card/80 backdrop-blur-sm rounded-xl p-6 text-center border border-border glow-effect">
+                  <div className={`w-12 h-12 mx-auto mb-4 ${tool.color} rounded-lg flex items-center justify-center shadow-lg`}>
+                    <span className="text-white font-mono font-bold text-lg">{tool.initials}</span>
+                  </div>
+                  <h5 className="font-semibold text-foreground mb-2">{tool.name}</h5>
+                  <div className="text-sm text-muted-foreground">{tool.description}</div>
                 </div>
               ))}
             </div>

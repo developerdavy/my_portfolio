@@ -37,6 +37,12 @@ export default function Navigation() {
                 {t('nav.skills')}
               </a>
               <a 
+                href="#pricing" 
+                className="hover:text-github-blue transition-colors duration-200"
+              >
+                {t('nav.pricing')}
+              </a>
+              <a 
                 href="#contact" 
                 className="hover:text-github-blue transition-colors duration-200"
               >
@@ -86,6 +92,13 @@ export default function Navigation() {
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t('nav.skills')}
+              </a>
+              <a
+                href="#pricing"
+                className="block px-3 py-2 text-github-text hover:text-github-blue transition-colors duration-200"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t('nav.pricing')}
               </a>
               <a
                 href="#contact"

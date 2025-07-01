@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Clock, ArrowRight, MessageSquare, Send } from "lucide-react";
+import { SiWhatsapp, SiLinkedin, SiInstagram } from "react-icons/si";
 import { useLanguage } from "../contexts/LanguageContext";
 
 export default function ContactSection() {
@@ -51,6 +52,45 @@ export default function ContactSection() {
             >
               +254 740 133 390
               <ArrowRight className="ml-2 w-4 h-4" />
+            </a>
+          </div>
+        </div>
+
+        {/* Social Media & WhatsApp */}
+        <div className="mt-12 text-center">
+          <h3 className="text-xl font-semibold text-foreground mb-6">{t('contact.social.title')}</h3>
+          <div className="flex justify-center space-x-4 mb-8">
+            {/* WhatsApp */}
+            <a
+              href="https://wa.me/254740133390?text=Hi%20David%2C%20I%27m%20interested%20in%20your%20web%20development%20services"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-green-500 hover:bg-green-600 text-white p-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg"
+            >
+              <SiWhatsapp className="w-6 h-6" />
+              <span className="sr-only">WhatsApp</span>
+            </a>
+
+            {/* LinkedIn */}
+            <a
+              href="https://linkedin.com/in/david-kamau"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg"
+            >
+              <SiLinkedin className="w-6 h-6" />
+              <span className="sr-only">LinkedIn</span>
+            </a>
+
+            {/* Instagram */}
+            <a
+              href="https://instagram.com/david_kamau_dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-gradient-to-br from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white p-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg"
+            >
+              <SiInstagram className="w-6 h-6" />
+              <span className="sr-only">Instagram</span>
             </a>
           </div>
         </div>
