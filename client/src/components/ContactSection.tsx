@@ -73,7 +73,7 @@ export default function ContactSection() {
 
             {/* LinkedIn */}
             <a
-              href="https://linkedin.com/in/david-kamau"
+              href="https://www.linkedin.com/in/david-kamau-8a3199330"
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg"
@@ -84,7 +84,7 @@ export default function ContactSection() {
 
             {/* Instagram */}
             <a
-              href="https://instagram.com/david_kamau_dev"
+              href="https://instagram.com/davidkamau635"
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-gradient-to-br from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white p-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg"
